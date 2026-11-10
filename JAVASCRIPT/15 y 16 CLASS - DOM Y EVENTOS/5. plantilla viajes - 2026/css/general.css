@@ -1,0 +1,189 @@
+:root {
+  --fuente-principal: "Lato", sans-serif;
+
+  /* Átomos de color */
+  --primario: #da595e;
+  --obscuro: #484848;
+  --claro: #ffffff;
+  --hospedaje: #274154;
+  --concierto: #da595e;
+  --clase: #598dda;
+  --paseo: #940ad4;
+  --rosa: pink;
+  --sombra: rgba(0, 0, 0, 0.75);
+  --sombra-boton: rgba(0, 0, 0, 1);
+  --sombra-footer: rgba(0, 0, 0, 0.52);
+
+  /* Átomos de espacio y forma */
+  --espacio-xs: 0.5rem;
+  --espacio-sm: 1rem;
+  --espacio-md: 2rem;
+  --espacio-lg: 3rem;
+  --radio: 10px;
+  --contenedor: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: var(--fuente-principal);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/** Colores reutilizables **/
+.hospedaje {
+  color: var(--hospedaje);
+}
+
+.concierto {
+  color: var(--concierto);
+}
+
+.clase {
+  color: var(--clase);
+}
+
+.paseo {
+  color: var(--paseo);
+}
+
+/** Márgenes reutilizables **/
+.m-0 {
+  margin: 0;
+}
+
+.mb-1 {
+  margin-bottom: var(--espacio-sm);
+}
+
+.mb-2 {
+  margin-bottom: var(--espacio-md);
+}
+
+.mt-3 {
+  margin-top: var(--espacio-lg);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/** Contenedor reutilizable **/
+.contenedor {
+  max-width: var(--contenedor);
+  margin: 0 auto;
+}
+
+/** Grid reutilizable **/
+.grid {
+  display: grid;
+  gap: var(--espacio-sm);
+}
+
+.grid-auto-250 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-auto-200 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.contenedor-cards {
+  display: grid;
+  gap: var(--espacio-sm);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-sm);
+}
+
+.card img {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+/** Botón: solo lo compartido **/
+.boton {
+  display: block;
+  text-align: center;
+  padding: var(--espacio-sm);
+  border: none;
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 14px 43px -21px var(--sombra-boton);
+  -moz-box-shadow: 0px 14px 43px -21px var(--sombra-boton);
+  box-shadow: 0px 14px 43px -21px var(--sombra-boton);
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-claro {
+  background-color: var(--claro);
+  color: var(--obscuro);
+}
+
+.boton-claro:hover {
+  background-color: var(--primario);
+  color: var(--claro);
+}
+
+.boton-oscuro {
+  background-color: var(--obscuro);
+  color: var(--claro);
+}
+
+.boton-oscuro:hover {
+  background-color: var(--primario);
+  color: var(--claro);
+}
+
+.boton-primario {
+  background-color: var(--primario);
+  color: var(--claro);
+}
+
+.boton-primario:hover {
+  background-color: var(--obscuro);
+  color: var(--claro);
+}

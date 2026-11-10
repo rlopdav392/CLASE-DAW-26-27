@@ -1,0 +1,495 @@
+# CSS refactorizado con metodología BEM
+
+```css
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+  --fuente-principal: "Lato", sans-serif;
+  --primario: #da595e;
+  --obscuro: #484848;
+  --claro: #ffffff;
+}
+
+/* =========================================
+   RESET Y ESTILOS GENERALES
+========================================= */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuente-principal);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================
+   UTILIDADES
+========================================= */
+
+.fondo-rosa {
+  background-color: pink;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+
+.categoria--hospedaje {
+  color: #274154;
+}
+
+.categoria--concierto {
+  color: #da595e;
+}
+
+.categoria--clase {
+  color: #598dda;
+}
+
+.categoria--paseo {
+  color: #940ad4;
+}
+
+/* =========================================
+   BOTÓN FLOTANTE
+========================================= */
+
+.btn-flotante {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--claro);
+  box-shadow: 0 6px 32px -10px rgba(0, 0, 0, 0.75);
+  color: var(--obscuro);
+  text-decoration: none;
+}
+
+.btn-flotante--activo {
+  background-color: var(--primario);
+  color: var(--claro);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  height: 100vh;
+  background-image: url("../img/arriba.jpg");
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  background-position: 0 0;
+  background-size: 150% 150%;
+  transition: background-position 0.3s ease;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  align-self: start;
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.navegacion__enlace {
+  color: var(--claro);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.navegacion__enlace:last-of-type {
+  margin-right: 0;
+}
+
+/* =========================================
+   CONTENIDO DEL HERO
+========================================= */
+
+.hero__contenido {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  grid-template-rows: max-content auto;
+}
+
+.hero__titulo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  color: var(--claro);
+}
+
+.hero__formulario {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.hero__campo {
+  flex: 1;
+  border-radius: 10px;
+  border: none;
+  background-image: url("../img/lupa.png");
+  background-repeat: no-repeat;
+  background-position: calc(1% + 1rem) calc(1% + 0.8rem);
+  padding-left: 5rem;
+  font-size: 1.6rem;
+}
+
+.hero__buscar {
+  position: absolute;
+  right: 1rem;
+  top: 0.6rem;
+  background-color: var(--primario);
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  color: var(--claro);
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+main > section {
+  margin-bottom: 2rem;
+}
+
+/* =========================================
+   GRID DE TARJETAS
+========================================= */
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card__imagen {
+  width: 100%;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__categoria {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card__titulo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.card__precio {
+  color: var(--obscuro);
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   PREMIUM
+========================================= */
+
+.premium {
+  background-image: url("../img/hospedaje-pro.jpg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  height: 28rem;
+  grid-template-columns: unset;
+}
+
+@media (min-width: 768px) {
+  .premium {
+    grid-template-columns: auto 30%;
+  }
+}
+
+.premium__info {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.premium__titulo {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .premium__info {
+    grid-column: 2 / 3;
+  }
+
+  .premium__titulo {
+    text-align: right;
+  }
+}
+
+/* =========================================
+   BOTÓN REUTILIZABLE
+========================================= */
+
+.boton {
+  background-color: var(--claro);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--obscuro);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 14px 43px -21px rgba(0, 0, 0, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+.boton:hover {
+  background-color: var(--primario);
+  color: var(--claro);
+}
+
+/* =========================================
+   DESTINOS POPULARES
+========================================= */
+
+.destinos .cards {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card--destino {
+  position: relative;
+}
+
+.card__info--destino {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--claro);
+}
+
+.card__titulo--destino {
+  font-size: 1.8rem;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  background-color: var(--claro);
+  border-top: 1px solid var(--obscuro);
+  position: fixed;
+  bottom: -100%;
+  transition: all 0.25s ease-in;
+  width: 100%;
+  box-shadow: 0 -18px 36px -16px rgba(0, 0, 0, 0.52);
+  padding: 3rem 0;
+}
+
+.footer--activo {
+  bottom: 0;
+}
+
+.footer__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.footer__nav {
+  padding: 1rem;
+}
+
+.footer__titulo {
+  font-size: 1.2rem;
+}
+
+.footer__enlace {
+  color: var(--obscuro);
+  text-decoration: none;
+  display: block;
+  padding-top: 0.5rem;
+}
+
+/* =========================================
+   REDES SOCIALES
+========================================= */
+
+.sociales__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1 0 auto;
+  list-style: none;
+}
+
+.sociales__item {
+  margin-right: 1rem;
+}
+
+.sociales__item:last-of-type {
+  margin-right: 0;
+}
+
+.sociales__enlace {
+  text-decoration: none;
+}
+
+.sociales__enlace::before {
+  font-family: "Font Awesome 5 Brands";
+  color: var(--obscuro);
+  font-size: 1.8rem;
+}
+
+.sociales__enlace[href*="facebook.com"]::before {
+  content: "\f39e";
+}
+
+.sociales__enlace[href*="twitter.com"]::before {
+  content: "\f099";
+}
+
+.sociales__enlace[href*="youtube.com"]::before {
+  content: "\f431";
+}
+
+.sociales__enlace[href*="instagram.com"]::before {
+  content: "\f16d";
+}
+
+.sociales__enlace[href*="pinterest.com"]::before {
+  content: "\f231 ";
+}
+
+.sociales__texto {
+  display: none;
+}
+```
+
+---
+
+# Ejemplos de aplicación en HTML
+
+## 1. Tarjeta normal
+
+```html
+<div class="cards">
+  <article class="card">
+    <img class="card__imagen" src="img/hacer2.jpg" alt="Concierto">
+
+    <div class="card__info">
+      <p class="card__categoria categoria--concierto">
+        Concierto
+      </p>
+
+      <p class="card__titulo">
+        Concierto de pop
+      </p>
+
+      <p class="card__precio">
+        40 € la entrada
+      </p>
+    </div>
+  </article>
+</div>
+```
+
+## 2. Tarjeta de destino
+
+```html
+<article class="card card--destino">
+  <img class="card__imagen" src="img/destino.jpg" alt="Destino">
+
+  <div class="card__info card__info--destino">
+    <p class="card__titulo card__titulo--destino">
+      Málaga
+    </p>
+  </div>
+</article>
+```
+
+## 3. Botón reutilizable
+
+```html
+<a class="boton" href="#">
+  Ver alojamiento
+</a>
+```
+
+## 4. Footer activo
+
+```html
+<footer class="footer footer--activo">
+  <div class="contenedor footer__contenedor">
+    ...
+  </div>
+</footer>
+```
+

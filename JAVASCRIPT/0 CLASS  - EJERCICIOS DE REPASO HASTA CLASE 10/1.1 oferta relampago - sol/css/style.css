@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: antiquewhite;
+}
+
+input {
+  height: 28px;
+  width: 220px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+button {
+  height: 40px;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: olivedrab;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+#cuentaAtras {
+  border: 1px solid red;
+  color: red;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+#resultado {
+  font-weight: bold;
+}

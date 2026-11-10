@@ -1,0 +1,275 @@
+  @import url("general.css");
+
+  .nueva-clase {
+    background-color: var(--rosa);
+  }
+
+  /* Interfaz **/
+
+  .btn-flotante {
+    position: fixed;
+    bottom: var(--espacio-sm);
+    right: var(--espacio-sm);
+    padding: var(--espacio-xs) var(--espacio-md);
+    -webkit-box-shadow: 0px 6px 32px -10px var(--sombra);
+    -moz-box-shadow: 0px 6px 32px -10px var(--sombra);
+    box-shadow: 0px 6px 32px -10px var(--sombra);
+
+    &.activo {
+      background-color: var(--primario);
+      color: var(--claro);
+    }
+  }
+
+  /** Header */
+  .hero {
+    height: 100vh;
+    background-image: url(../img/arriba.jpg);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-position: 0 0;
+    background-size: 150% 150%;
+    transition: background-position 0.3s ease;
+  }
+
+  .header {
+    align-self: start;
+    width: 100%;
+    padding-top: var(--espacio-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navegacion {
+    a {
+      color: var(--claro);
+      text-decoration: none;
+      margin-right: var(--espacio-sm);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .contenido-hero {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: max-content auto;
+
+    h1 {
+      grid-column: 2 / 3;
+      color: var(--claro);
+      grid-row: 1 / 2;
+    }
+
+    form {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      position: relative;
+      display: flex;
+      height: 4rem;
+
+      input[type="text"] {
+        flex: 1;
+        border-radius: var(--radio);
+        border: none;
+        background-image: url(../img/lupa.png);
+        background-repeat: no-repeat;
+        background-position: calc(1% + 1rem) calc(1% + 0.8rem);
+        padding-left: 5rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .boton-hero {
+    position: absolute;
+    right: var(--espacio-sm);
+    top: 0.6rem;
+    padding: 0.7rem var(--espacio-md);
+    text-transform: uppercase;
+  }
+
+  /** Contenido Principal**/
+
+  main {
+    > section {
+      margin-bottom: var(--espacio-md);
+    }
+  }
+
+  .info {
+    .categoria {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .titulo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .precio {
+      color: var(--obscuro);
+      font-size: 0.9rem;
+    }
+  }
+
+  /** Premium **/
+  .premium {
+    background-image: url(../img/hospedaje-pro.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 28rem;
+    grid-template-columns: unset;
+
+    @media (min-width: 768px) {
+      grid-template-columns: auto 30%;
+    }
+
+    .info {
+      grid-column: 1 / 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--espacio-sm);
+
+      h2 {
+        margin-bottom: var(--espacio-md);
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        grid-column: 2 / 3;
+
+        h2 {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  /** Populares **/
+  .destinos {
+    .contenedor-cards {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+      position: relative;
+    }
+
+    .info {
+      position: absolute;
+      bottom: var(--espacio-sm);
+      left: var(--espacio-sm);
+      color: var(--claro);
+
+      .titulo {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  /** Footer */
+  .footer {
+    background-color: var(--claro);
+    border-top: 1px solid var(--obscuro);
+    padding-top: var(--espacio-lg);
+    position: fixed;
+    bottom: -100%;
+    /*   bottom: 0;  */
+    transition: all 0.25s ease-in;
+    width: 100%;
+    -webkit-box-shadow: 0px -18px 36px -16px var(--sombra-footer);
+    -moz-box-shadow: 0px -18px 36px -16px var(--sombra-footer);
+    box-shadow: 0px -18px 36px -16px var(--sombra-footer);
+    padding: var(--espacio-lg) 0;
+
+    &.activo {
+      bottom: 0;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: var(--espacio-sm);
+    }
+
+    .nav-footer {
+      padding: var(--espacio-sm);
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .menu a {
+      color: var(--obscuro);
+      text-decoration: none;
+      display: block;
+      padding-top: var(--espacio-xs);
+    }
+  }
+
+  /** Redes Socialaes**/
+
+  .sociales {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      justify-content: flex-end;
+      /* justify-content: center;
+        justify-content: space-around; */
+      /* justify-content: space-between; */
+      flex: 1 0 auto;
+      list-style: none;
+
+      li {
+        margin-right: var(--espacio-sm);
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        a {
+          text-decoration: none;
+
+          &:before {
+            font-family: "Font Awesome 5 Brands";
+            color: var(--obscuro);
+            font-size: 1.8rem;
+          }
+
+          &[href*="facebook.com"]::before {
+            content: "\f39e";
+          }
+
+          &[href*="twitter.com"]::before {
+            content: "\f099";
+          }
+
+          &[href*="youtube.com"]::before {
+            content: "\f431";
+          }
+
+          &[href*="instagram.com"]::before {
+            content: "\f16d";
+          }
+
+          &[href*="pinterest.com"]::before {
+            content: "\f231 ";
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }

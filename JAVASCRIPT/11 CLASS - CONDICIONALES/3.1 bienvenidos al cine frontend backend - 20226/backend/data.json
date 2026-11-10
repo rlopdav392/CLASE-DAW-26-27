@@ -1,0 +1,17 @@
+[
+    { "titulo": "Taxi Driver", "genero": "drama", "edadMinima": 16 },
+    { "titulo": "The Shawshank Redemption", "genero": "drama", "edadMinima": 13 },
+    { "titulo": "Casablanca", "genero": "drama", "edadMinima": 0 },
+  
+    { "titulo": "The Wolf of Wall Street", "genero": "comedia", "edadMinima": 16 },
+    { "titulo": "The Truman Show", "genero": "comedia", "edadMinima": 13 },
+    { "titulo": "Back to the Future", "genero": "comedia", "edadMinima": 0 },
+  
+    { "titulo": "The Rocky Horror Picture Show", "genero": "musical", "edadMinima": 16 },
+    { "titulo": "Les Miserables", "genero": "musical", "edadMinima": 13 },
+    { "titulo": "La La Land", "genero": "musical", "edadMinima": 0 },
+  
+    { "titulo": "The Godfather", "genero": "crimen", "edadMinima": 16 },
+    { "titulo": "El Secreto de tus Ojos", "genero": "crimen", "edadMinima": 13 },
+    { "titulo": "Gothika", "genero": "crimen", "edadMinima": 10 }
+  ]
