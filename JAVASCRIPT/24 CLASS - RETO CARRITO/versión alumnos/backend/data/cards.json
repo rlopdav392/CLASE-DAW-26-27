@@ -1,0 +1,122 @@
+[
+  {
+    "src": "img/curso1.jpg",
+    "titulo": "Aprende a hacer bolitas de zanahoria sanas",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "1"
+  },
+  {
+    "src": "img/curso2.jpg",
+    "titulo": "Curso de Comida Vegetariana",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "2"
+  },
+  {
+    "src": "img/curso3.jpg",
+    "titulo": "Guitarra para Principiantes",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "3"
+  },
+  {
+    "src": "img/curso4.jpg",
+    "titulo": "Huerto en tu casas",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "4"
+  },
+  {
+    "src": "img/curso5.jpg",
+    "titulo": "Decoración con productos de tu hogar",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "5"
+  },
+  {
+    "src": "img/curso1.jpg",
+    "titulo": "Diseño Web para Principiantes",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "6"
+  },
+  {
+    "src": "img/curso2.jpg",
+    "titulo": "Comida Mexicana para principiantes",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "7"
+  },
+  {
+    "src": "img/curso3.jpg",
+    "titulo": "Estudio Musical en tu casa",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "8"
+  },
+  {
+    "src": "img/curso4.jpg",
+    "titulo": "Cosecha tus propias frutas y verduras",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "9"
+  },
+  {
+    "src": "img/curso5.jpg",
+    "titulo": "Prepara galletas caseras",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "10"
+  },
+  {
+    "src": "img/curso1.jpg",
+    "titulo": "Aprende a tocar el piano",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "11"
+  },
+  {
+    "src": "img/curso2.jpg",
+    "titulo": "100 Recetas de Comida Natural",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "12"
+  },
+  {
+    "src": "img/curso5.jpg",
+    "titulo": "cocinando bizcochos",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "13"
+  },
+  {
+    "src": "img/curso1.jpg",
+    "titulo": "tocando la flauta",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "14"
+  },
+  {
+    "src": "img/curso2.jpg",
+    "titulo": "Echando las cartas",
+    "author": "Lolo",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "15"
+  }
+]

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Carrito de cursos en línea: aprende algo nuevo con todos los cursos a $15"
+    />
+    <title>Carrito de cursos</title>
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+   
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="logo" href="#">
+          <img class="logo__image" src="img/logo.jpg" alt="Logo – ir al inicio" />
+        </a>
+
+        <div class="cart">
+          <button class="cart__toggle" type="button" aria-label="Carrito">
+            <img class="cart__icon" src="img/cart.png" alt="" />
+            <span class="cart__count" id="contador-carrito">0</span>
+          </button>
+
+          <section class="cart__panel" id="carrito" aria-label="Carrito de compra">
+            <!-- JS: un <li class="cart__item"> por curso -->
+              <div class="cart__header">
+                <span>Imagen</span>
+                <span>Nombre</span>
+                <span>Precio</span>
+                <span>Cantidad</span>
+                <span></span>
+              </div>
+              
+              <ul class="cart__list" id="lista-carrito"></ul>
+              
+              <div class="cart__total">
+                <span>Total</span>
+                <span id="total-carrito">$0.00</span>
+              </div>
+            <button class="btn btn--block cart__clear" type="button" id="vaciar-carrito">
+              Vaciar carrito
+            </button>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">Aprende algo nuevo</h1>
+            <p class="hero__text">Todos los cursos a $15</p>
+
+            <form class="search" role="search" action="#" method="post">
+              <label class="visually-hidden" for="buscador">Buscar cursos</label>
+              <input
+                class="search__input"
+                type="search"
+                id="buscador"
+                placeholder="¿Qué te gustaría aprender?"
+              />
+              <button class="search__submit" type="submit" aria-label="Buscar"></button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" aria-label="Ventajas de la plataforma">
+        <div class="container">
+          <ul class="features__list">
+            <li class="features__item features__item--courses">
+              20,000 Cursos en línea<br />Explora los temas más recientes
+            </li>
+            <li class="features__item features__item--instructors">
+              Instructores Expertos<br />Aprende con distintos estilos
+            </li>
+            <li class="features__item features__item--lifetime">
+              Acceso de por vida<br />Aprende a tu ritmo
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="courses container">
+        <h2 class="heading-section">Cursos en línea</h2>
+        <!-- La primera card está escrita directamente en HTML. -->
+        <div class="courses__list" id="contenedor-cursos">
+          <article class="card">
+            <img class="card__image" src="img/curso1.jpg" alt="Curso de HTML y CSS">
+            <div class="card__body">
+              <h3 class="card__title">HTML y CSS desde cero</h3>
+              <p class="card__author">Laura García</p>
+              <img class="card__rating" src="img/estrellas.png" alt="Valoración de cinco estrellas">
+              <p class="card__price">
+                <s class="card__price-old">$30.00</s>
+                <span class="card__price-new">$15.00</span>
+              </p>
+              <button class="btn btn--primary btn--block card__button js-agregar-carrito" type="button" data-id="curso-estatico">
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container container">
+        <nav class="footer__nav" aria-label="Enlaces principales">
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">Para tu Negocio</a></li>
+            <li><a class="footer__link" href="#">Conviértete en Instructor</a></li>
+            <li><a class="footer__link" href="#">Aplicaciones Móviles</a></li>
+      
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Información de la empresa">
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">¿Quiénes Somos?</a></li>
+            <li><a class="footer__link" href="#">Empleo</a></li>
+            <li><a class="footer__link" href="#">Blog</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Información de la empresa">
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">Soporte</a></li>
+            <li><a class="footer__link" href="#">Temas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <dialog class="cart__dialog" id="dialog-carrito">
+      <div class="cart__dialog-content">
+        <p>✓</p>
+        <h3>¡Carrito vaciado!</h3>
+        <span>Has eliminado todos los productos.</span>
+      </div>
+    </dialog>
+  </body>
+</html>

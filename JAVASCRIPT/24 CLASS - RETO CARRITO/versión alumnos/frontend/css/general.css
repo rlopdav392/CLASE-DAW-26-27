@@ -1,0 +1,212 @@
+/****************************************/
+/* ATOMS - PERSONALITY CONSISTENCY SYSTEM */
+/****************************************/
+/*
+
+---00 WHITESPACE SYSTEM / ATOM
+
+    - Spacing system (px)
+      4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80
+
+---01 TYPOGRAPHY SYSTEM / ATOM
+
+    - Font family
+      Raleway, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif
+
+    - Font sizes (px)
+      11 / 14 / 15 / 16 / 18 / 22 / 30 / 40 / 50
+
+    - Font weights
+      Light: 300
+      Default: 400
+      Semibold: 600
+      Bold: 700
+
+    - Font line heights
+      Heading: 1.2
+      Heading (compact): 1.25 / 1.35
+      Paragraph default: 1.6
+
+    - Font letter spacing
+      -1px (headings)
+      -0.8px (card titles)
+      1px (buttons)
+
+---02 COLORS SYSTEM / ATOM
+
+    - Primary: #33c3f0
+    - Shades: (darks)
+      #1eaedb (hover / links)
+      #0fa0ce (link hover)
+
+    - Brand gradient (feature bar)
+      #741d51 -> #e44e52
+
+    - Greys
+      #222 (text)
+      #555 (soft text, buttons)
+      #bbb / #d1d1d1 / #e1e1e1 (borders)
+      #f5f3f3 (page background)
+
+    - Danger: red
+
+---03 BORDER RADIUS
+
+    Default: 4px
+    Round: 50%
+
+*/
+
+:root {
+  --color-primary: #33c3f0;
+  --color-primary-dark: #1eaedb;
+  --color-link-hover: #0fa0ce;
+
+  --color-brand-start: #741d51;
+  --color-brand-end: #e44e52;
+
+  --color-text: #222;
+  --color-text-soft: #555;
+  --color-surface: #fff;
+  --color-background: #f5f3f3;
+  --color-border: #e1e1e1;
+  --color-border-input: #d1d1d1;
+  --color-border-strong: #bbb;
+  --color-danger: red;
+
+  --radius-default: 4px;
+}
+
+/****************************************/
+/* GLOBAL SETTINGS */
+/****************************************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px/16px = 62.5% => 1rem = 10px */
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family:
+    "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--color-primary-dark);
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Foco visible solo para teclado, con un color consistente */
+:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+/****************************************/
+/* GENERAL REUSABLE COMPONENTS */
+/****************************************/
+
+.container {
+  width: 80%;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.btn {
+  display: inline-block;
+  height: 3.8rem;
+  padding: 0 3.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 3.8rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--color-text-soft);
+  background-color: transparent;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-default);
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    border-color 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    color: #333;
+    border-color: #888;
+  }
+}
+
+.btn--primary {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+  }
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.heading-section {
+  margin: 3.2rem 0;
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  text-align: center;
+}
